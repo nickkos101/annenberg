@@ -1,5 +1,5 @@
 <div class="what">
-    {% for product in collections.all-paintings.products %}
+    {% for product in collections.all-paintings.products limit: 30 %}
     {{ product.title }}
     {% endfor %}
 </div>
