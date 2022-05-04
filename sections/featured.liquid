@@ -7,7 +7,7 @@
                     <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}">
                 </div>
                 <p class="product-collections">
-                    {% for collection in product.collections %}
+                    {% for collection in product.collections limit: 3 %}
                     {{ collection.title }}
                     {% if forloop.last != true %},{% endif %}
                     {% endfor %}
