@@ -2,7 +2,7 @@
     <div class="swiper-wrapper">
         {% for product in collections.all-paintings.products %}
         <div class="swiper-slide">
-            {{ product.featured_image | img_url: '300x' | img_tag }}
+            <img src="{{ product.featured_image | img_url: '300x' }}" loading="lazy">
         </div>
         {% endfor %}
         <!-- <div class="swiper-slide">
