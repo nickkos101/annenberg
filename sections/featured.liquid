@@ -5,7 +5,7 @@
             <div class="product-item">
                 <div class="product-image">
                     <a href="{{ product.url }}">
-                    <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}">
+                    <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
                 </a>
                 </div>
                 <p class="product-collections">
