@@ -8,7 +8,8 @@
                 </div>
                 <p class="product-collections">
                     {% for collection in product.collections %}
-                    {{ collection.title }},
+                    {{ collection.title }} 
+                    {% if forloop.last != true %},{% endif %}
                     {% endfor %}
                 </p>
                 <h3 class="product-title">{{ product.title }}</h3>
