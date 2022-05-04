@@ -1,6 +1,5 @@
 <div class="what">
-    {{ collections.products | json }}
-    {% for product in collections.all_paintings.products %}
+    {% for product in collections.all-paintings.products %}
     {{ product.title }}
     {% endfor %}
 </div>
