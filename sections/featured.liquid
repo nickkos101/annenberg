@@ -1,7 +1,7 @@
 <section>
     <div class="container">
         <div class="grid">
-            {% for product in collections.all-paintings.products %}
+            {% for product in collections.all-paintings.products limit: 20 %}
             <div class="product-item">
                 <div class="product-image">
                     <a href="{{ product.url }}">
