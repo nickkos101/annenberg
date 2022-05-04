@@ -1,5 +1,10 @@
-<div class="what">
-    {% for product in collections.all-paintings.products limit: 30 %}
-    {{ product.title }}
-    {% endfor %}
-</div>
+<section>
+    <div class="grid">
+        {% for product in collections.all-paintings.products limit: 30 %}
+        <div class="product-item">
+            <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape }}">
+            <h3>{{ product.title }}</h3>
+        </div>
+        {% endfor %}
+    </div>
+</section>
