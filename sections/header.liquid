@@ -1,14 +1,8 @@
 <header>
     <div class="container">
-        {% if settings.use_logo %}
         <a id="logo" href="/">
             {{ 'logo.png' | asset_url | img_tag: shop.name }}
         </a>
-        {% else %}
-        <a id="site-title" href="/">
-            {{ shop.name }}
-        </a>
-        {% endif %}
         <form>
             <input type="text" name="search">
             <input type="submit" value="Search">
