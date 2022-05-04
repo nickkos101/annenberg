@@ -2,16 +2,13 @@
 {% assign sold_out = 'Sold Out' %}
 {% assign unavailable = 'Unavailable' %}
 
-<section class="single-product-page">
+<section class="single-product-page" itemscope itemtype="http://schema.org/Product">
   <div class="container">
     <div class="grid-half">
-      <div>
-        <div itemscope itemtype="http://schema.org/Product">
-          
+      <div>         
           <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
           <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
           
-          <form action="/cart/add" method="post" enctype="multipart/form-data">
             
             {% if product.images.size == 0 %}
             
@@ -104,24 +101,8 @@
           
           <div id="product-add">
             <input type="submit" name="add" id="add" value="{{ add_to_cart | escape }}">
-          </div>
+          </div>         
           
-          {% if collection %}
-          {% if collection.previous_product or collection.next_product %}
-          <div>     
-            {% if collection.previous_product %}
-            {% capture prev_url %}{{ collection.previous_product}}#content{% endcapture %}
-            <span class="left">{{ 'Previous Product' | link_to: prev_url }}</span>
-            {% endif %}
-            {% if collection.next_product %}
-            {% capture next_url %}{{ collection.next_product}}#content{% endcapture %}
-            <span class="right">{{ 'Next Product' | link_to: next_url }}</span>
-            {% endif %}
-          </div>
-          {% endif %}
-          {% endif %}
-          
-        </form>
       </div>
     </div>
   </div>
