@@ -4,7 +4,9 @@
             {% for product in collections.all-paintings.products %}
             <div class="product-item">
                 <div class="product-image">
+                    <a href="{{ product.url }}">
                     <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}">
+                </a>
                 </div>
                 <p class="product-collections">
                     {% for collection in product.collections limit: 3 %}
@@ -12,7 +14,7 @@
                     {% if forloop.last != true %},{% endif %}
                     {% endfor %}
                 </p>
-                <h3 class="product-title">{{ product.title }}</h3>
+                <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
                 <p class="product-price">Call for Pricing</p>
                 <a class="btn" href="{{ product.url }}">Select Options</a>
             </div>
