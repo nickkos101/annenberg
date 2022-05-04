@@ -4,7 +4,7 @@
             {% for product in collections.all-paintings.products %}
             <div class="product-item">
                 <div class="product-image">
-                    <img src="{{ product.featured_image | product_img_url: '300x300' }}" alt="{{ product.title | escape }}">
+                    <img src="{{ product.featured_image | product_img_url: 'x300' }}" alt="{{ product.title | escape }}">
                 </div>
                 <h3>{{ product.title }}</h3>
             </div>
