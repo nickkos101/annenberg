@@ -2,6 +2,7 @@
 {% assign sold_out = 'Sold Out' %}
 {% assign unavailable = 'Unavailable' %}
 
+<div class="container">
 <div itemscope itemtype="http://schema.org/Product">
   
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
@@ -188,3 +189,4 @@ Shopify.Image.preload({{ product.images | json }}, 'grande');
 Shopify.Image.preload({{ product.images | json }}, '1024x1024');
 
 </script>
+</div>
