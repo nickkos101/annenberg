@@ -1,7 +1,7 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img src="images/alienchambers.jpeg" />
+            {{ 'alienchambers.jpeg' | asset_img_url | img_tag }}
         </div>
         <div class="swiper-slide">
             <img src="images/autumn.jpg" />
