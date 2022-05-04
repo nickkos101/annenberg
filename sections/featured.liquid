@@ -3,7 +3,7 @@
         <div class="grid">
             {% for product in collections.all-paintings.products %}
             <div class="product-item">
-                <img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title | escape }}">
+                <img src="{{ product.featured_image | product_img_url: '300x300' }}" alt="{{ product.title | escape }}">
                 <h3>{{ product.title }}</h3>
             </div>
             {% endfor %}
