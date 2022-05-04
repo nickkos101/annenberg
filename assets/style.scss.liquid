@@ -64,11 +64,11 @@ header nav li {
     margin: 0 15px;
     display: inline-block;
     vertical-align: top;
-
+    
     &:first-of-type {
         margin-left: 0;
     }
-
+    
     &:last-of-type {
         margin-right: 0;
     }
@@ -82,4 +82,16 @@ header nav a {
 .container {
     max-width: 1170px;
     margin: 0 auto;
+}
+
+
+
+/* Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
 }
