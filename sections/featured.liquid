@@ -6,7 +6,9 @@
                 <div class="product-image">
                     <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}">
                 </div>
-                <h3>{{ product.title }}</h3>
+                <h3 class="product-title">{{ product.title }}</h3>
+                <p>Call for Pricing</p>
+                <a class="btn" href="{{ product.url }}">Select Options</a>
             </div>
             {% endfor %}
         </div>
