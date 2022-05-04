@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/ff42419330.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <title>
     {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
@@ -59,6 +60,7 @@
     That's what content_for_layout is for.
     {% endcomment %}
     <main role="main">
+      {% section 'swiper' %}
       {% section 'featured' %}
       <div class="container">
         {{ content_for_layout }}
@@ -70,6 +72,7 @@
     </footer>
     
     {{ 'shop.js'  | asset_url | script_tag }}
+    {{ 'https://unpkg.com/swiper/swiper-bundle.min.js' | script_tag }}
     
   </body>
   
