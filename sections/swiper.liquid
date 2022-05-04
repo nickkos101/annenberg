@@ -1,6 +1,11 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
+        {% for product in collections.all-paintings.products %}
         <div class="swiper-slide">
+            {{ product.featured_image | asset_img_url: 'master' | img_tag }}
+        </div>
+        {% endfor %}
+        <!-- <div class="swiper-slide">
             {{ 'alienchambers.jpeg' | asset_img_url: 'master' | img_tag }}
         </div>
         <div class="swiper-slide">
@@ -122,7 +127,7 @@
         </div>
         <div class="swiper-slide">
             {{ 'woodland.jpeg' | asset_img_url: 'master' | img_tag }}
-        </div>
+        </div> -->
     </div>
     <div class="swiper-pagination"></div>
 </div>
