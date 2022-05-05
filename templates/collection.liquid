@@ -27,11 +27,16 @@ Important notes about pagination:
 {{ collection.description }}
 {% endif %}
 
-{% for product in collection.products %}
-{% include 'product-item' %}
-{% else %}
-<p>There are no products in this view.</p>
-{% endfor %}
+<div class="container">
+  <div class="grid">
+    {% for product in collection.products %}
+    {% include 'product-item' %}
+    {% else %}
+    <p>There are no products in this view.</p>
+    {% endfor %}
+  </div>
+</div>
+
 
 {% if paginate.pages > 1 %}
 {{ paginate | default_pagination }}
