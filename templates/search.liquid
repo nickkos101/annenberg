@@ -1,9 +1,5 @@
 <div class="container">
-<form action="/search" method="get" role="search">
-  <input name="q" type="search" id="search-field" placeholder="Search store..." value="{{ search.terms | escape }}" />
-  <input type="submit" value="Search" />
-</form>
-
+  
 {% if search.performed %}
 
 {% paginate search.results by 10 %}
