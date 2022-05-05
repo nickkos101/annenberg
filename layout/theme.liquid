@@ -50,10 +50,6 @@
     {{ content_for_layout }}
   </main>
   
-  <footer>
-    Copyright &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. {{ powered_by_link }}.
-  </footer>
-  
   {{ 'shop.js'  | asset_url | script_tag }}
   {{ 'https://unpkg.com/swiper/swiper-bundle.min.js' | script_tag }}
   
