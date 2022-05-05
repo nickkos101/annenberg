@@ -6,7 +6,7 @@
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
   <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />    
   <div class="container">
-    {% section 'breadcrumbs' %}
+    {% render 'breadcrumbs' %}
     <div class="grid-half">
       <div>  
             {% if product.images.size > 1 %}
