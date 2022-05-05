@@ -28,10 +28,10 @@
         <h1 class="product-title">{{ product.title }}</h1>
         
         <ul class="product-details">
-          <li><i class="fas fa-paint-brush"></i> Form: {{ product.metafields.my_fields.form }}</li>
-          <li><i class="far fa-calendar"></i> Date: {{ product.metafields.my_fields.date }}</li>
-          <li><i class="fas fa-ruler"></i> Dimensions: {{ product.metafields.my_fields.dimensions }}</li>
-          <li><i class="fas fa-barcode"></i> SKU: {{ product.metafields.my_fields.sku }}</li>
+          <li><i class="fas fa-paint-brush"></i> <span>Form:</span> {{ product.metafields.my_fields.form }}</li>
+          <li><i class="far fa-calendar"></i> <span>Date:</span> {{ product.metafields.my_fields.date }}</li>
+          <li><i class="fas fa-ruler"></i> <span>Dimensions:</span> {{ product.metafields.my_fields.dimensions }}</li>
+          <li><i class="fas fa-barcode"></i> <span>SKU:</span> {{ product.metafields.my_fields.sku }}</li>
         </ul>       
         
         <div id="product-variants" class="{% if hide_default_title %} hidden{% endif %}">
