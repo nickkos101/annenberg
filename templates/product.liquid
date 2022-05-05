@@ -4,9 +4,9 @@
 
 <section class="single-product-page" itemscope itemtype="http://schema.org/Product">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
-  <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />    
+  <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
+  {% render 'breadcrumbs' %}    
   <div class="container">
-    {% render 'breadcrumbs' %}
     <div class="grid-half">
       <div>  
             {% if product.images.size > 1 %}
