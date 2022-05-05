@@ -82,6 +82,10 @@ header form {
     display: inline-block;
     max-width: 70%;
     width: 100%;
+
+    @include mq(xs) {
+        display: none;
+    }
 }
 
 header form input[type=search] {
