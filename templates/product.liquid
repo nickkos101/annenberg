@@ -14,7 +14,7 @@
           {% for image in product.images %}
           <div class="swiper-slide">
             <a href="{{ image | img_url: '1024x1024' }}">
-              <img src="{{ image | img_url: 'large' }}" alt="{{ image.alt | escape }}" />
+              <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}" />
             </a>
           </div>
           {% endfor %}
