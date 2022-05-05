@@ -389,6 +389,10 @@ header nav a {
             max-width: 300px;
             width: 100%;
             padding: 10px 5px;
+
+            @include mq(sm) {
+                max-width: 100%;
+            }
         }
 
         .btn {
@@ -402,6 +406,10 @@ header nav a {
             padding: 12px 45px;
             border-radius: 4px;
             margin: 15px 0;
+            
+            @include mq(sm) {
+                max-width: 100%;
+            }
         }
     }
 
