@@ -34,24 +34,6 @@
           <li><i class="fas fa-barcode"></i> SKU:</li>
         </ul>       
         
-        
-        <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
-          {% if product.available %}
-          <link itemprop="availability" href="http://schema.org/InStock" />
-          {% else %}
-          <link itemprop="availability" href="http://schema.org/OutOfStock" />
-          {% endif %}
-          <p>
-            Call for Pricing
-          </p>
-        </div>
-        
-        {% assign hide_default_title = false %}
-        {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
-        {% assign hide_default_title = true %}
-        {% endif %}       
-        
         <div id="product-variants" class="{% if hide_default_title %} hidden{% endif %}">
           <label for="id">Print Type:</label>
           <select id="product-select" name="id">
