@@ -1,21 +1,23 @@
 {% render 'breadcrumbs' %}
 <div class="container box">
-
-{% if search.performed %}
-
-{% paginate search.results by 10 %}
-
-<div class="grid">
-  {% for item in search.results %}      
-  {% render 'product-item' product: item %}
-  {% endfor %}
-</div>
-
-{% if paginate.pages > 1 %}
-{{ paginate | default_pagination }}
-{% endif %}
-
-{% endpaginate %}    
-
-{% endif %}  
+  
+  {% if search.performed %}
+  
+  {% paginate search.results by 10 %}
+  
+  <div class="grid">
+    {% for item in search.results %}      
+    {% render 'product-item' product: item %}
+    {% endfor %}
+  </div>
+  
+  <div class="pagination">
+    {% if paginate.pages > 1 %}
+    {{ paginate | default_pagination }}
+    {% endif %}
+  </div>
+  
+  {% endpaginate %}    
+  
+  {% endif %}  
 </div>
