@@ -19,12 +19,7 @@
           </div>
           <div>
             
-            <h1>{{ product.title }}</h1>
-            
-            <div itemprop="description">
-              {{ product.description }}
-            </div>
-            
+            <h1 class="product-title">{{ product.title }}</h1>         
           
             
             <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -68,6 +63,11 @@
             <input type="submit" name="add" id="add" value="{{ add_to_cart | escape }}">
           </div>         
           
+      </div>
+    </div>
+    <div class="light">
+      <div itemprop="description">
+        {{ product.description }}
       </div>
     </div>
   </div>
