@@ -1,6 +1,7 @@
+{{ template }}
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-        {% for product in collections.all-paintings.products limit: 20 %}
+        {% for product in collection.products limit: 20 %}
         <div class="swiper-slide">
             <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url: '300x' }}" loading="lazy"></a>
         </div>
