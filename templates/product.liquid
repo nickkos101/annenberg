@@ -62,7 +62,7 @@
     </div>
     <div class="product-slerp">
       <div class="container">
-        <p><strong>SKU:</strong><strong>Collections: </strong>{% for collection in product.collections %}<a href="{{ collection.url }}">{{ collection.title }}</a>{% if forloop.last != true %}, {% endif %}{% endfor %} <strong>Tags:</strong> {% for tag in product.tags %}{{ tag }}{% if forloop.last != true %}, {% endif %}{% endfor %}</p>
+        <p><strong>SKU:</strong><strong>Collections: </strong>{% for collection in product.collections %}<a href="{{ collection.url }}">{{ collection.title }}</a>{% if forloop.last != true %}, {% endif %}{% endfor %} <strong>Tags:</strong> {% for tag in product.tags %}<a href="{{ tag.url }}">{{ tag }}</a>{% if forloop.last != true %}, {% endif %}{% endfor %}</p>
       </div>
     </div>
   </div>
