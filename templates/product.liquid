@@ -26,7 +26,7 @@
         
         
         <h1 class="product-title">{{ product.title }}</h1>
-
+        
         <ul class="product-details">
           <li><i class="fas fa-paint-brush"></i> Form:</li>
           <li><i class="far fa-calendar"></i> Date:</li>
@@ -44,7 +44,7 @@
           {% endfor %}
         </select>
       </div>        
-
+      
       <div id="product-add">
         <a class="btn" href="/pages/contact-us">Contact For Pricing</a>
       </div>         
@@ -53,10 +53,12 @@
   </div>
 </div>
 <div class="light">
-  <div class="container">
-    <h3 class="text-center">Description</h3>
-    <div itemprop="description">
-      {{ product.description }}
+  <div class="box">
+    <div class="container">
+      <h3 class="text-center">Description</h3>
+      <div itemprop="description">
+        {{ product.description }}
+      </div>
     </div>
   </div>
 </div>
