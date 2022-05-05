@@ -8,7 +8,7 @@
   {% render 'breadcrumbs' %}    
   <div class="container">
     <div class="grid-half">
-      <div>  
+      <div class="product-images">  
         {% if product.images.size > 1 %}
         {% for image in product.images %}
         <a href="{{ image | img_url: '1024x1024' }}">
