@@ -2,22 +2,7 @@
     <div class="container">
         <div class="grid">
             {% for product in collections.all-paintings.products limit: 20 %}
-            <div class="product-item">
-                <div class="product-image">
-                    <a href="{{ product.url }}">
-                    <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
-                </a>
-                </div>
-                <p class="product-collections">
-                    {% for collection in product.collections limit: 3 %}
-                    {{ collection.title }}
-                    {% if forloop.last != true %},{% endif %}
-                    {% endfor %}
-                </p>
-                <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
-                <p class="product-price">Call for Pricing</p>
-                <a class="btn" href="{{ product.url }}">Select Options</a>
-            </div>
+            {% render 'product-item' %}
             {% endfor %}
         </div>
     </div>
