@@ -1,4 +1,6 @@
-{{ collection | json }}
+{% if collection == null %}
+{% assign collection = all_collections['all-paintings'] %}
+{% endif %}
 
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
