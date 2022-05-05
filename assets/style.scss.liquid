@@ -71,6 +71,13 @@ header {
     }
 }
 
+header #mobile-menu-btn {
+    display: none;
+    @include mq(sm) {
+        display: block;
+    }
+}
+
 header .logo {
     display: inline-block;
 }
