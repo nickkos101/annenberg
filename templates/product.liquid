@@ -9,15 +9,21 @@
   <div class="container">
     <div class="grid-half">
       <div class="product-images">  
-        {% if product.images.size > 1 %}
-        {% for image in product.images %}
-        <a href="{{ image | img_url: '1024x1024' }}">
-          <img src="{{ image | img_url: 'large' }}" alt="{{ image.alt | escape }}" />
-        </a>
-        {% endfor %}
-        {% endif %}            
+        <div class="swiper-wrapper">
+          {% if product.images.size > 1 %}
+          {% for image in product.images %}
+          <div class="swiper-slide">
+            <a href="{{ image | img_url: '1024x1024' }}">
+              <img src="{{ image | img_url: 'large' }}" alt="{{ image.alt | escape }}" />
+            </a>
+          </div>
+          {% endfor %}
+          {% endif %}            
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div>
+      <div class="product-content">
+        
         
         <h1 class="product-title">{{ product.title }}</h1>         
         
