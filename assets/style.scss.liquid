@@ -1,5 +1,50 @@
 /* CSS stykes go in here */
 
+@mixin mq($media-query) {
+    $mq-xl: "(min-width: 1201px)"; 	// red
+    $mq-lg: "(max-width: 1200px)"; 	// orange
+    $mq-md: "(max-width: 992px)"; 	// yellow
+    $mq-sm: "(max-width: 768px)"; 	// blue
+    $mq-xs: "(max-width: 480px)"; 	// green
+    $mq-xxs: "(max-width: 320px)"; 	// purple
+    $mq-mad: "(max-width: 740px)"; 	// mobile ads
+    $mq-sc: "(max-width: 1440px)";  // below container width
+    
+    @if $media-query == xxs {
+      @media #{$mq-xxs} {
+        @content;
+      }
+    } @else if $media-query == xs {
+      @media #{$mq-xs} {
+        @content;
+      }
+    } @else if $media-query == sm {
+      @media #{$mq-sm} {
+        @content;
+      }
+    } @else if $media-query == md {
+      @media #{$mq-md} {
+        @content;
+      }
+    } @else if $media-query == lg {
+      @media #{$mq-lg} {
+        @content;
+      }
+    } @else if $media-query == xl {
+      @media #{$mq-xl} {
+        @content;
+      }
+    } @else if $media-query == mad {
+      @media #{$mq-mad} {
+        @content;
+      }
+    } @else if $media-query == sc {
+      @media #{$mq-sc} {
+        @content;
+      }
+    }
+  }
+
 * {
     box-sizing: border-box;
 }
@@ -338,6 +383,10 @@ header nav a {
     grid-template-rows: 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
+
+    @include mq(sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .grid-half {
