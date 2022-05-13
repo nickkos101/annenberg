@@ -19,9 +19,11 @@
   </select>
   {% endif %} 
   
-  {% if collection.description.size > 0 %}
-  {{ collection.description }}
-  {% endif %}  
+  <div class="box">
+    {% if collection.description.size > 0 %}
+    {{ collection.description }}
+    {% endif %} 
+  </div> 
 </div>
 
 <div class="container">
