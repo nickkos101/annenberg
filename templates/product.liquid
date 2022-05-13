@@ -15,6 +15,7 @@
           <div class="swiper-slide">
             <a href="{{ image | img_url: '1024x1024' }}">
               <img src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}" />
+              <span class="water-mark">AA</span>
             </a>
           </div>
           {% endfor %}
