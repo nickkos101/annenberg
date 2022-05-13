@@ -288,11 +288,11 @@ header nav a {
             border-bottom: 1px solid #c1c1c1;
             max-height: 300px;
         }
-
+        
         a {
             position: relative;
         }
-
+        
         .water-mark {
             bottom: 0;
             // right: 0;
@@ -339,7 +339,7 @@ header nav a {
         font-size: 14px;
         margin-top: 5px;
         color: #989898;
-
+        
         i {
             width:1em;
             margin-right: 4px;
@@ -547,24 +547,24 @@ header nav a {
 }
 
 .grid-25-75 {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-
-        @include mq(sm) {
-            grid-template-columns: repeat(1, 1fr);
-        }        
-}
-
-.grid-full {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    
+    @include mq(sm) {
+        grid-template-columns: repeat(1, 1fr);
+    }        
+}
 
+.grid-full {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
     @include mq(sm) {
         grid-template-columns: repeat(1, 1fr);
     }   
@@ -577,7 +577,7 @@ header nav a {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 90px;
-
+    
     .water-mark {
         bottom: 0;
         right: 52px;
@@ -713,7 +713,7 @@ form {
         font-weight: bold;
         padding-bottom: 8px;
     }
-
+    
     input[type=text], input[type=email], input[type=email], input[type=number], input[type=password], input[type=tel], textarea {
         font-size: 16px;
         color: #222;
@@ -725,22 +725,22 @@ form {
         border: 1px solid #c1c1c1;
         background-color: #fff;
     }
-
+    
     input[type=submit] {
-            display: inline-block;
-            width: 100%;
-            max-width: 300px;
-            font-size: 22px;
-            background-color: #3bb54a;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 45px;
-            border-radius: 4px;
-            margin: 15px 0;
-            border: none;
-            
-            @include mq(sm) {
-                max-width: 100%;
-            }
+        display: inline-block;
+        width: 100%;
+        max-width: 300px;
+        font-size: 22px;
+        background-color: #3bb54a;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 45px;
+        border-radius: 4px;
+        margin: 15px 0;
+        border: none;
+        
+        @include mq(sm) {
+            max-width: 100%;
+        }
     }
 }
