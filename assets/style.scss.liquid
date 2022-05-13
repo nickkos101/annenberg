@@ -700,4 +700,21 @@ form {
         border: 1px solid #c1c1c1;
         background-color: #fff;
     }
+
+    input[type=submit] {
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            font-size: 22px;
+            background-color: #3bb54a;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 45px;
+            border-radius: 4px;
+            margin: 15px 0;
+            
+            @include mq(sm) {
+                max-width: 100%;
+            }
+    }
 }
