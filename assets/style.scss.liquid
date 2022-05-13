@@ -91,6 +91,11 @@ header #mobile-menu-btn {
 
 header .logo {
     display: inline-block;
+    
+    @include mq(sm) {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 header .logo img {
