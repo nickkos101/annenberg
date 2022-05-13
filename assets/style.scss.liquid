@@ -11,39 +11,39 @@
     $mq-sc: "(max-width: 1440px)";  // below container width
     
     @if $media-query == xxs {
-      @media #{$mq-xxs} {
-        @content;
-      }
+        @media #{$mq-xxs} {
+            @content;
+        }
     } @else if $media-query == xs {
-      @media #{$mq-xs} {
-        @content;
-      }
+        @media #{$mq-xs} {
+            @content;
+        }
     } @else if $media-query == sm {
-      @media #{$mq-sm} {
-        @content;
-      }
+        @media #{$mq-sm} {
+            @content;
+        }
     } @else if $media-query == md {
-      @media #{$mq-md} {
-        @content;
-      }
+        @media #{$mq-md} {
+            @content;
+        }
     } @else if $media-query == lg {
-      @media #{$mq-lg} {
-        @content;
-      }
+        @media #{$mq-lg} {
+            @content;
+        }
     } @else if $media-query == xl {
-      @media #{$mq-xl} {
-        @content;
-      }
+        @media #{$mq-xl} {
+            @content;
+        }
     } @else if $media-query == mad {
-      @media #{$mq-mad} {
-        @content;
-      }
+        @media #{$mq-mad} {
+            @content;
+        }
     } @else if $media-query == sc {
-      @media #{$mq-sc} {
-        @content;
-      }
+        @media #{$mq-sc} {
+            @content;
+        }
     }
-  }
+}
 
 * {
     box-sizing: border-box;
@@ -70,7 +70,7 @@ img {
 header {
     background-color: #fff;
     padding-top: 15px;
-
+    
     @include mq(sm) {
         padding: 10px 0;
         text-align: center;
@@ -105,7 +105,7 @@ header form {
     display: inline-block;
     max-width: 70%;
     width: 100%;
-
+    
     @include mq(sm) {
         display: none;
     }
@@ -136,23 +136,23 @@ header nav {
     background-color: #222;
     text-transform: uppercase;
     font-size: 20px;
-
+    
     @include mq(sm) {
         display: none;
         left: 0;
         top: 0;
         background-color: #fff;
         text-align: left;
-
+        
         ul li {
             display: block;
             margin: 0;
             padding-bottom: 8px;
-
+            
             a {
                 color: #222;
             }
-
+            
             ul {
                 position: relative;
                 top: initial;
@@ -184,13 +184,13 @@ header nav li {
     &:last-of-type {
         margin-right: 0;
     }
-
+    
     &:hover {
         ul {
             display: block;
         }
     }
-
+    
     ul {
         z-index: 999;
         top: -1;
@@ -208,7 +208,7 @@ header nav li {
             a {
                 color: #222;
             }
-
+            
             &:last-of-type {
                 padding-bottom: 0;
             }
@@ -224,7 +224,7 @@ header nav a {
 .container {
     max-width: 1170px;
     margin: 0 auto;
-
+    
     @include mq(sm) {
         padding: 0 15px;
     }
@@ -236,7 +236,7 @@ header nav a {
 
 .box {
     padding: 15px 0;
-
+    
     &:first-of-type {
         padding-top: 45px;
     }
@@ -282,13 +282,13 @@ header nav a {
             border-bottom: 1px solid #c1c1c1;
             max-height: 300px;
         }
-
+        
         @include mq(sm) {
             width: 100%;
             height: auto;
         }
     }
-
+    
     .product-title {
         margin: 0;
         margin-bottom: 10px;
@@ -299,7 +299,7 @@ header nav a {
             text-decoration: none;
         }
     }
-
+    
     .product-detail {
         background-color: #fff;
         color:#989898;
@@ -307,11 +307,11 @@ header nav a {
         margin: 0px;
         padding: 4px 6px;
         border: 1px solid #c1c1c1;
-
+        
         p {
             margin: 0;
         }
-
+        
         i {
             margin-right: 10px;
             width: 2em;
@@ -345,7 +345,7 @@ header nav a {
 /* Single Product Page */
 
 .single-product-page {
-
+    
     .product-title {
         margin: 0;
         font-weight: normal;
@@ -355,16 +355,16 @@ header nav a {
             text-decoration: none;
         }
     }
-
+    
     .product-images, .product-content {
         padding: 25px 0;
         @include mq(xs) {
             padding: 5px 0;
         }
     }
-
-
-
+    
+    
+    
     .product-images {
         position: relative;
         overflow: hidden;
@@ -373,14 +373,14 @@ header nav a {
             height: auto;
             border: 4px solid #fff;
         }
-
+        
         .swiper-slide {
             width: 100%;
             height: auto;
             align-items: center;
             display: flex;
             justify-content: center;
-
+            
             img {
                 width: 100%;
                 height: auto;
@@ -388,19 +388,19 @@ header nav a {
                 max-height: initial;
             }
         }
-
+        
         .swiper-pagination {
             padding: 10px 15px;
             // background-color: transparent;
         }
-
+        
         @include mq(sm) {
             padding-top: 25px;
         }
     }
-
+    
     .product-content {
-
+        
         .product-details {
             font-size: 14px;
             list-style: none;
@@ -421,7 +421,7 @@ header nav a {
                 }
             }
         }
-
+        
         label {
             display: block;
             font-size: 12px;
@@ -432,12 +432,12 @@ header nav a {
             max-width: 300px;
             width: 100%;
             padding: 10px 5px;
-
+            
             @include mq(sm) {
                 max-width: 100%;
             }
         }
-
+        
         .btn {
             display: inline-block;
             width: 100%;
@@ -449,13 +449,13 @@ header nav a {
             padding: 12px 45px;
             border-radius: 4px;
             margin: 15px 0;
-
+            
             @include mq(sm) {
                 max-width: 100%;
             }
         }
     }
-
+    
     .product-slerp {
         text-align: center;
         border-top: 1px solid #f7f7f7;
@@ -464,12 +464,12 @@ header nav a {
         font-size: 14px;
         text-transform: uppercase;
         color: #989898;
-
+        
         a {
             color: #989898;
             text-decoration: none;
         }
-
+        
         strong {
             color: #222;
             padding-left: 10px;
@@ -478,7 +478,7 @@ header nav a {
             }
         }
     }
-
+    
 }
 
 
@@ -501,7 +501,7 @@ header nav a {
     grid-template-rows: 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-
+    
     @include mq(sm) {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -513,7 +513,7 @@ header nav a {
     grid-template-rows: 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-
+    
     @include mq(sm) {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -549,7 +549,7 @@ header nav a {
     border-top: 1px solid #c1c1c1;
     border-bottom: 1px solid #c1c1c1;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+    
     &.single {
         position: relative;
         border-left: 1px solid #c1c1c1;
@@ -566,64 +566,69 @@ header nav a {
     margin: 0;
     background-color: #fff;
     padding: 10px 0;
-  }
+}
 
-  a {
-      color: #000;
-  }
+a {
+    color: #000;
+}
 
-  .breadcrumbs__list {
+.breadcrumbs__list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
+}
 
-  .breadcrumbs__item {
+.breadcrumbs__item {
     display: inline-block;
-  }
+}
 
-  .breadcrumbs__item:first-of-type {
-      padding-left: 0;
-  }
+.breadcrumbs__item:first-of-type {
+    padding-left: 0;
+}
 
-  .breadcrumbs__item:not(:last-child):after {
+.breadcrumbs__item:not(:last-child):after {
     content: '/';
     display: inline-block;
     margin: 0 .20em;
     position: relative;
     vertical-align: middle;
     padding: 0 4px;
-  }
+}
 
-  .breadcrumbs__link {
+.breadcrumbs__link {
     text-decoration: underline;
-  }
+}
 
-  .breadcrumbs__link[aria-current="page"] {
+.breadcrumbs__link[aria-current="page"] {
     color: inherit;
     font-weight: normal;
     text-decoration: none;
-  }
+}
 
-  .breadcrumbs__link[aria-current="page"]:hover,
-  .breadcrumbs__link[aria-current="page"]:focus {
+.breadcrumbs__link[aria-current="page"]:hover,
+.breadcrumbs__link[aria-current="page"]:focus {
     text-decoration: underline;
-  }
+}
 
-  .pagination {
-      margin: 10px 0;
-      padding: 15px 0;
-      background-color: #fff;
-      font-size: 20px;
-      color: #fff;
-      text-align: center;
+.pagination {
+    margin: 10px 0;
+    padding: 15px 0;
+    background-color: #fff;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    
+    a, .deco, .current {
+        padding: 4px 8px;
+        margin: 0 5px;
+        background-color: #222;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+}
 
-      a, .deco, .current {
-          padding: 4px 8px;
-          margin: 0 5px;
-          background-color: #222;
-          color: #fff;
-          border-radius: 4px;
-          text-decoration: none;
-      }
-  }
+@keyframes rotateAnimation {
+    from {transform: rotateY(45deg);}
+    to {transform: rotateY(225deg);}
+}
