@@ -28,5 +28,10 @@ jQuery(function($) {
     },
   });
   
+  $('.product-item').hover(function(){
+    var img_tag = $(this).find('img');
+    var original_image = img_tag.attr('src');
+    var hover_image = img_tag.attr('data-hover');
+  });
   
 });
