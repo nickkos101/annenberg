@@ -1,32 +1,42 @@
 <div class="container">
     <h1>{{ page.title }}</h1>
     {{ page.content }}
-
+    
     {% form 'contact' %}
-
-    {% if form.posted_successfully? %}
-      <p class="note form-success">
-        {{ 'contact.form.post_success' }}
-      </p>
-    {% endif %}
-
     {{ form.errors | default_errors }}
-
-    {% assign name_attr = 'contact.form.name' | handle %}
-    <label for="ContactFormName" class="hidden-label">{{ 'contact.form.name' }}</label>
-    <input type="text" id="ContactFormName" class="input-full" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.name' }}" autocapitalize="words" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.name }}{% endif %}">
-
-    <label for="ContactFormEmail" class="hidden-label">{{ 'contact.form.email' }}</label>
-    <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="{{ 'contact.form.email' }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
-
-    {% assign name_attr = 'contact.form.phone' | handle %}
-    <label for="ContactFormPhone" class="hidden-label">{{ 'contact.form.phone' }}</label>
-    <input type="tel" id="ContactFormPhone" class="input-full" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.phone' }}" pattern="[0-9\-]*" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-
-    <label for="ContactFormMessage" class="hidden-label">{{ 'contact.form.message' }}</label>
-    <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]" placeholder="{{ 'contact.form.message' }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
-
-    <input type="submit" class="btn right" value="{{ 'contact.form.send' }}">
-
-  {% endform %}
+    
+    <div class="first-name">
+        <label for="first-name">First name</label>
+        <input type="text" name="contact[first_name]" id="first-name" />
+    </div>
+    
+    <div class="last-name">
+        <label for="last-name">Last name</label>
+        <input type="text" name="contact[last_name]" id="last-name" />
+    </div>
+    
+    <div class="phone">
+        <label for="phone">Phone</label>
+        <input type="tel" name="contact[phone]" id="phone" />
+    </div>
+    
+    <div class="email">
+        <label for="email">Email</label>
+        <input type="email" name="contact[email]" id="email" />
+    </div>
+    
+    <div class="order-number">
+        <label for="order-number">Order number</label>
+        <input type="text" name="contact[order_number]" id="order-number" />
+    </div>
+    
+    <div class="message">
+        <label for="message">Message</label>
+        <textarea name="contact[body]" id="message"></textarea>
+    </div>
+    
+    <div class="submit">
+        <input type="submit" value="Create" />
+    </div>
+    {% endform %}
 </div>
