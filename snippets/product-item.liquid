@@ -1,7 +1,7 @@
 <div class="product-item">
   <div class="product-image">
     <a href="{{ product.url }}">
-      <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-hover="{{ product.images[1] | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
+      <img src="{{ product.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" {% if product.images[1] %} data-hover="{{ product.images[1] | img_url: '270x270', crop: 'center', scale: 2 }}" {% endif %} alt="{{ product.title | escape }}" loading="lazy">
     </a>
   </div>
   <p class="product-collections">
