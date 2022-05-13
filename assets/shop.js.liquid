@@ -16,8 +16,8 @@ jQuery(function($) {
       el: ".swiper-pagination",
     },
   });
-
-
+  
+  
   var productSwiper = new Swiper(".product-images", {
     slidesPerView: "auto",
     centeredSlides: true,
@@ -28,10 +28,26 @@ jQuery(function($) {
     },
   });
   
-  $('.product-item').hover(function(){
-    var img_tag = $(this).find('img');
-    var original_image = img_tag.attr('src');
-    var hover_image = img_tag.attr('data-hover');
-  });
-  
-});
+  $('.product-item').hover(
+    function(){
+      var img_tag = $(this).find('img');
+      var original_image = img_tag.attr('src');
+      var hover_image = img_tag.attr('data-hover');
+      img_tag.attr('src', hover_image);
+    }, function(){
+      var img_tag = $(this).find('img');
+      var original_image = img_tag.attr('src');
+      var hover_image = img_tag.attr('data-hover');
+      img_tag.attr('src', original_image);
+    });
+    
+    $( "td" ).hover(
+      function() {
+        $( this ).addClass( "hover" );
+      }, function() {
+        $( this ).removeClass( "hover" );
+      }
+      );
+      
+    });
+    
