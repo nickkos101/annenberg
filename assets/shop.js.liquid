@@ -29,16 +29,12 @@ jQuery(function($) {
   });
   
   $('.product-item').hover(
-    function(){
-      var img_tag = $(this).find('img');
-      var original_image = img_tag.attr('src');
-      var hover_image = img_tag.attr('data-hover');
-      img_tag.attr('src', hover_image);
-    }, function(){
-      var img_tag = $(this).find('img');
-      var original_image = img_tag.attr('src');
-      var hover_image = img_tag.attr('data-hover');
-      img_tag.attr('src', original_image);
+    function() {
+      var image = $(this).find('img');
+      image.attr('src', image.attr('data-hover'));
+    }, function() {
+      var image = $(this).find('img');
+      image.attr('src', image.attr('data-src'));
     });
     
     $( "td" ).hover(
