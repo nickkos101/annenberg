@@ -281,9 +281,6 @@ header nav a {
             // border: 4px solid #fff;
             border-bottom: 1px solid #c1c1c1;
             max-height: 300px;
-            &:hover {
-                animation: rotateAnimation 6s linear infinite;
-            }
         }
         
         @include mq(sm) {
@@ -634,4 +631,14 @@ a {
 @keyframes rotateAnimation {
     from {transform: rotateY(45deg);}
     to {transform: rotateY(225deg);}
+}
+
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
 }
