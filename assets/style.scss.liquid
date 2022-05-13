@@ -263,7 +263,7 @@ header nav a {
     background-color: #fff;
     border: 1px solid #c1c1c1;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+    
     &:hover {
         animation: bounce 2s ease infinite;
     }
@@ -637,12 +637,7 @@ a {
     to {transform: rotateY(225deg);}
 }
 
-@keyframes bounce {
-    70% { transform:translateY(0%); }
-    80% { transform:translateY(-15%); }
-    90% { transform:translateY(0%); }
-    95% { transform:translateY(-7%); }
-    97% { transform:translateY(0%); }
-    99% { transform:translateY(-3%); }
-    100% { transform:translateY(0); }
+@keyframes pulse {
+    from { transform: scale(0.8); }
+    to { transform: scale(1.2); }
 }
