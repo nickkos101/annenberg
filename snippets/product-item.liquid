@@ -12,7 +12,7 @@
     {% endfor %}
   </p>
   <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
-  <!-- <p class="product-price">Call for Pricing</p> -->
+  <p class="product-price"><i class="fas fa-paint-brush"></i> <span>Form:</span> {{ product.metafields.my_fields.form }}</p>
   <!-- <div class="product-detail">
     <p><small><i class="far fa-calendar"></i> Date: {{ product.metafields.my_fields.date }}</small></p>
     <p><small><i class="fas fa-ruler"></i> Dimensions: {{ product.metafields.my_fields.dimensions }}</small></p>
