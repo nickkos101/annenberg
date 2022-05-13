@@ -12,9 +12,9 @@
 
     {{ form.errors | default_errors }}
 
-    {% assign name_attr = 'contact.form.name' | t | handle %}
+    {% assign name_attr = 'contact.form.name' | handle %}
     <label for="ContactFormName" class="hidden-label"></label>
-    <input type="text" id="ContactFormName" class="input-full" name="contact[name]" placeholder="" autocapitalize="words" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+    <input type="text" id="ContactFormName" class="input-full" name="contact[{{ name_attr }}]" placeholder="" autocapitalize="words" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.name }}{% endif %}">
 
     <label for="ContactFormEmail" class="hidden-label"></label>
     <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
