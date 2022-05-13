@@ -546,6 +546,18 @@ header nav a {
     }
 }
 
+.grid-25-75 {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        @include mq(sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }        
+}
+
 
 /* Swiper */
 
