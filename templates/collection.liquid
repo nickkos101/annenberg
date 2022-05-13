@@ -19,12 +19,13 @@
   </select>
   {% endif %} 
   
+  {% if collection.description.size > 0 %}
   <div class="well">
-    {% if collection.description.size > 0 %}
     {{ collection.description }}
-    {% endif %} 
-  </div> 
+  </div>
+  {% endif %} 
 </div>
+
 
 <div class="container">
   <div class="grid">
