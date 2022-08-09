@@ -4,7 +4,7 @@
         <i id="mobile-menu-btn" class="fas fa-bars"></i>
 
         <a class="logo" href="/">
-            {{ 'logo.png' | asset_url | img_tag: shop.name }}
+            {{ 'https://cdn.shopify.com/s/files/1/0644/6723/9130/files/annenberglogo.png?v=1660080574' | img_tag: shop.name }}
         </a>
         <form action="/search" method="get" class="search-form right" role="search">
             <input name="q" type="search" id="search-field" placeholder="Search store..." value="{{ search.terms | escape }}" />
