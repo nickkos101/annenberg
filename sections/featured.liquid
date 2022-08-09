@@ -1,3 +1,4 @@
+{% paginate collections.all-paintings.products by 20 %}
 <section>
     <div class="container">
         <div class="grid">
@@ -5,5 +6,12 @@
             {% render 'product-item' product : product %}
             {% endfor %}
         </div>
+
+<div class="pagination">
+  {% if paginate.pages > 1 %}
+  {{ paginate | default_pagination }}
+  {% endif %}
+</div>
+{% endpaginate %}
     </div>
 </section>
