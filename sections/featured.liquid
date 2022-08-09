@@ -6,12 +6,11 @@
             {% render 'product-item' product : product %}
             {% endfor %}
         </div>
-
+    </div>
 <div class="pagination">
   {% if paginate.pages > 1 %}
   {{ paginate | default_pagination }}
   {% endif %}
 </div>
 {% endpaginate %}
-    </div>
 </section>
