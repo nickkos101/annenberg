@@ -1,7 +1,64 @@
 {
   "current": {
     "customer_layout": "theme",
-    "example_option": "option"
+    "example_option": "option",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "swiper": {
+        "type": "swiper",
+        "settings": {
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "blocks": {
+          "b70623b6-4721-40e8-af25-adc1b98c87cd": {
+            "type": "Collections",
+            "settings": {
+              "collection": "abstracts"
+            }
+          },
+          "718e835e-d4c8-4b32-99d6-f175bbe9f135": {
+            "type": "Collections",
+            "settings": {
+              "collection": "marine"
+            }
+          },
+          "314f617a-4556-4a8c-a6b8-d769cd7176b5": {
+            "type": "Collections",
+            "settings": {
+              "collection": "nature"
+            }
+          },
+          "15f84d3e-52b0-4a12-aaa9-492f7016fc9f": {
+            "type": "Collections",
+            "settings": {
+              "collection": "people"
+            }
+          }
+        },
+        "block_order": [
+          "b70623b6-4721-40e8-af25-adc1b98c87cd",
+          "718e835e-d4c8-4b32-99d6-f175bbe9f135",
+          "314f617a-4556-4a8c-a6b8-d769cd7176b5",
+          "15f84d3e-52b0-4a12-aaa9-492f7016fc9f"
+        ],
+        "settings": {
+        }
+      },
+      "featured": {
+        "type": "featured",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Naked": {
