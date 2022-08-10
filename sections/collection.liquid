@@ -1,12 +1,15 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
+<section>
+    <div class="container">
+        <div class="grid">
+          <div class="product-item">
+  <div class="product-image">
+    <a href="{{ collection.url }}">
+      <img src="{{ collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-src="{{ collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
+      <span class="water-mark">AA</span>
+    </a>
+  </div>
+  <h3 class="product-title"><a href="{{ collection.url }}">{{ collection.title }}</a></h3>
+</div>
+        </div>
+    </div>
+</section>
