@@ -5,7 +5,7 @@
             <div class="product-item">
                 <div class="product-image">
                     <a href="{{ block.settings.collection.url }}">
-                        <img src="{{ block.settings.collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-src="{{ collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
+                        <img src="{{ block.settings.collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-src="{{ collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-hover="{{ block.settings.collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
                         <span class="water-mark">AA</span>
                     </a>
                 </div>
