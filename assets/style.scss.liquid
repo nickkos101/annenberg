@@ -284,6 +284,19 @@ header nav a {
         margin-bottom: 5px;
         color: #989898;
     }
+
+    &.collection {
+      .product-image {
+        max-height: initial;
+        min-height: initial;
+        img {
+          max-height: initial;
+          @include mq(xs) {
+            max-height: initial;
+          }
+        }
+      }
+    }
     
     .product-image {
         align-items: center;

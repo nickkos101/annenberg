@@ -2,7 +2,7 @@
     <div class="fluid-container">
         <div class="grid">
             {% for block in section.blocks limit: section.blocks.size %}
-            <div class="product-item">
+            <div class="product-item collection">
                 <div class="product-image">
                     <a href="{{ block.settings.collection.url }}">
                         <img src="{{ block.settings.collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-src="{{ block.settings.collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-hover="{{ block.settings.collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
