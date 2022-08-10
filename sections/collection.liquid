@@ -4,12 +4,12 @@
             {% for block in section.blocks limit: section.blocks.size %}
             <div class="product-item">
                 <div class="product-image">
-                    <a href="{{ collection.url }}">
-                        <img src="{{ collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-src="{{ collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
+                    <a href="{{ block.settings.collection.url }}">
+                        <img src="{{ block.settings.collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" data-src="{{ collection.featured_image | img_url: '270x270', crop: 'center', scale: 2 }}" alt="{{ product.title | escape }}" loading="lazy">
                         <span class="water-mark">AA</span>
                     </a>
                 </div>
-                <h3 class="product-title"><a href="{{ collection.url }}">{{ collection.title }}</a></h3>
+                <h3 class="product-title"><a href="{{ block.settings.collection.url }}">{{ block.settings.collection.title }}</a></h3>
             </div>
           {% endfor %}
         </div>
